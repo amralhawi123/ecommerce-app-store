@@ -13,7 +13,7 @@ const DeleteRateHook = (item) => {
     const user = JSON.parse(localStorage.getItem("userData"))
 
     useEffect(() => {
-        if( item.user._id === user._id){
+        if( item.user&& item.user._id === user._id){
             setIsUser(true)
         } else {
             setIsUser(false)

@@ -33,12 +33,11 @@ const OrderPayCardHook = (adressDetails) => {
         setLoading(false)
     }
 
-
-
     //get response for create order card
     const resOrderCard = useSelector(state => state.orderCashReducer.createordercard)
     useEffect(() => {
         if (loading === false) {
+            
             if (resOrderCard && resOrderCard.status === "success") {
                 if (resOrderCard.session.url) {
                     window.open(resOrderCard.session.url)

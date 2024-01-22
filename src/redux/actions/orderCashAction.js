@@ -94,7 +94,7 @@ export const changeOrderDeliver = (id) => async (dispatch) => {
 export const createOrderCARD = (id) => async (dispatch) => {
   try {
     const respons = await useGetDataWithToken(`/api/v1/orders/checkout-session/${id}`);
-    
+    console.log(respons)
     dispatch({
       type: CREATE_ORDER_CARD,
       payload: respons,
