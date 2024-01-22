@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import  { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';  
 import GetallProductCart from '../cart/get-all-product-cart';
 import { createOrderCARD } from '../../redux/actions/orderCashAction';
@@ -47,7 +47,7 @@ const OrderPayCardHook = (adressDetails) => {
                 notify("فشل فى اكمال الطلب من فضلك حاول مره اخرى", "warn")
             }
         }
-    }, [loading])
+    }, [loading, resOrderCard])
 
 
     return [handelCreateOrderCARD]

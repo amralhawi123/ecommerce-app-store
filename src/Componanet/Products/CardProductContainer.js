@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 import ProductCard from './ProductCard';
 import SubTitle from './../Utilty/SubTitle';
 import { Row } from 'react-bootstrap';
@@ -19,7 +19,7 @@ const [favProd] = CardContainerHook()
          {
             product ? (
                product.map((item, index) => <ProductCard favProd={favProd} key={index} item={item}/>)
-            ): null
+            ): <Spinner animation="border" variant="primary" />
          }
       </Row>
    </Container>
