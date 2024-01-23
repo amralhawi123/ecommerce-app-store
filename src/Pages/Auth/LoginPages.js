@@ -40,12 +40,6 @@ const LoginPages = () => {
                 هل نسيت كلمة السر
             </Link>
           </label>
-          <Link to="/admin/allproducts" style={{ textDecoration: "none" }}>
-            <label className="mx-auto text-center">الدخول بحساب الادمن</label>
-          </Link>
-          <Link to="/user/allOrders" style={{ textDecoration: "none" }}>
-            <label className="mx-auto text-center">الدخول بحساب المستخدم</label>
-          </Link>
         </Col>
         {isPress===true? (loading===true?( <Spinner animation="border" variant="primary" />):null): null}
       </Row>

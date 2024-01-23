@@ -23,7 +23,7 @@ const AddRateHook = (id) => {
     }
     const submitCommint = async() => {
        if(rateText === ''){
-        notify("من فضلك أدخل الايميل", "error")
+        notify("من فضلك سجل دخول", "error")
         return
        }
        setLoading(true)
