@@ -12,15 +12,15 @@ function AdminAllOrderItem({order}) {
             <div className="w-100">
                <Row className="justify-content-between">
                <Col sm="12" className=" d-flex flex-row justify-content-between">
-                  <div className="d-inline pt-2 cat-text">طلب رقم #{order.id}</div> 
+                  <div className="d-inline pt-2 cat-text">طلب رقم #{order.id && order.id}</div> 
                </Col>
                </Row>
                <Row className="justify-content-center mt-2">
                <Col sm="12" className=" d-flex flex-row justify-content-start">
                   <div className="d-inline pt-2 cat-title">
-                     طلب من ...{order.user.name||''}
+                     طلب من ...{order.user.name && order.user.name||''}
                   </div>
-                  <div className="d-inline pt-2 cat-rate me-2">{order.user.email||''}</div>
+                  <div className="d-inline pt-2 cat-rate me-2">{order.user.email && order.user.email||''}</div>
                </Col>
                </Row>
    
